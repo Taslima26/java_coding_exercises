@@ -1,5 +1,6 @@
 package com.techreturners.exercise001;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Exercise001 {
@@ -38,6 +39,7 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        int occurrences = Collections.frequency(users, "Linux");
+        return occurrences;
     }
 }
