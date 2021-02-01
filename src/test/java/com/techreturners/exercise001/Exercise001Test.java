@@ -18,14 +18,14 @@ public class Exercise001Test {
     }
 
     @Test
-   
+
     public void checkHelloAlreadyUppercase() {
         Exercise001 ex001 = new Exercise001();
         assertEquals("Hello", ex001.capitalizeWord("Hello"));
     }
 
     @Test
-  
+
     public void checkInitials() {
         Exercise001 ex001 = new Exercise001();
         assertEquals("F.B", ex001.generateInitials("Frederic", "Bonneville"));
@@ -35,6 +35,7 @@ public class Exercise001Test {
 
     @Test
     @Ignore
+
     public void checkAddVat() {
         Exercise001 ex001 = new Exercise001();
         assertEquals(120, ex001.addVat(100, 20), 0.0);
@@ -44,11 +45,12 @@ public class Exercise001Test {
     }
 
     @Test
-    @Ignore
+
     public void checkSentenceReverse() {
         Exercise001 ex001 = new Exercise001();
-        assertEquals("oof", ex001.reverse("foo"));
-        assertEquals("?siht od ot tnaw neve uoy dluow yhw", ex001.reverse("why would you even want to do this?"));
+        assertEquals("oof", ex001.checkSentenceReverse("foo"));
+        assertEquals("?siht od ot tnaw neve uoy dluow yhw",
+                ex001.checkSentenceReverse("why would you even want to do this?"));
     }
 
     @Test
@@ -59,7 +61,6 @@ public class Exercise001Test {
         User u2 = new User("Paul", "Windows 95", "Windows");
         User u3 = new User("Sheila", "CentOS 7", "Linux");
         User u4 = new User("Pedro", "Ubuntu 18.04", "Linux");
-
 
         List<User> users = new ArrayList<User>();
         users.add(u1);
