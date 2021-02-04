@@ -16,7 +16,8 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        return 0.0;
+        double answer = Math.round(originalPrice * (vatRate / 100 + 1) * 100.0) / 100.0;
+        return answer;
     }
 
     public String checkSentenceReverse(String str) {
@@ -27,19 +28,23 @@ public class Exercise001 {
             sb.reverse();
             reverseWord += sb.toString() + " ";
         }
-        String resultString = reverseWord.trim();
-        String s[] = resultString.split(" ");
-        String ans = "";
-        for (int i = s.length - 1; i >= 0; i--) {
-            ans += s[i] + " ";
+        String reversedSentence = reverseWord.trim();
+        String reversedSentenceArray[] = reversedSentence.split(" ");
+        String ouputSentence = "";
+        for (int i = reversedSentenceArray.length - 1; i >= 0; i--) {
+            ouputSentence += reversedSentenceArray[i] + " ";
         }
-        return ans.replaceAll("\\s+$", "");
+        return ouputSentence.replaceAll("\\s+$", "");
 
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
-        int occurrences = Collections.frequency(users, "Linux");
-        return occurrences;
+        int noOfLinuxUsers = 0;
+        for (User eachUser : users) {
+            if (eachUser.getType().equals("Linux")) {
+                noOfLinuxUsers += 1;
+            }
+        }
+        return noOfLinuxUsers;
     }
 }
